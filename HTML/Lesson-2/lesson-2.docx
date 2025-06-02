@@ -1,0 +1,25 @@
+Note:
+caption: tiêu đề chính của bảng
+th: tiêu đè cho các thành phần
+tr: tạo hàng
+td: nội dung 1 cell
+
+Cách tạo:
+Tạo 1 table
+Tạo caption
+Tạo hàng bằng tr trước, sau đó có thể thêm th hoặc td cho nội dung 1 cell, lần lượt mỗi dòng
+
+Cấu trúc:
+table
+    caption
+    tr
+        th/td
+    tr
+        th/td
+    ...
+
+
+Rowspan, colspan: thiết lập chỉ số để gộp 2 cell gần nhau theo hàng hoặc cột
+(colspan = 2 thì sẽ gộp 2 cell của 2 cột khác nhau, tương tự với rowspan)
+
+Thêm attr border-radius = ?px để bo góc

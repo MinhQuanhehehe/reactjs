@@ -1,0 +1,11 @@
+Form có 2 attr cơ bản:
+    action: nơi gửi data khi bấm submit
+    method: chỉ định phương thức khi gửi dữ liệu ???
+
+tag input: phương thức đưa đầu vào
+    type text: dạng text có thể nhìn được
+    type password: dạng password
+    type number: dạng số, chỉnh min max step
+    
+
+

@@ -1,0 +1,26 @@
+Selector: có thể select tới:
+    tag
+    class
+    id
+
+style 1 selector:
+    color: màu nội dung
+    background: màu nền
+    text-align: căn giữa
+    margin: khoảng cách của các element bên ngoài đến block
+    padding: khoảng các từ viền block tới nội dung bên trong block
+    font-family: thay đổi font, (load từ bên ngoài bằng thẻ <link>)
+
+Values:
+    length:
+        absolute: px
+        relative: em, rem (rem liên hệ đến fontsize của root, còn em thì liên hệ đến fontsize của elementelement)
+                  vh, vw (phần trăm chieeuf cao hoặc chiều rộng của viewport)
+    percentages: cơ bản là length nhưng luôn luôn liên hệ với chỉ số khác
+
+    Color: 
+        keyword
+        rgb
+        hexadecimal
+        hwb
+        hsl
