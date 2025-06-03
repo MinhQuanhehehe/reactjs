@@ -7,11 +7,15 @@ Thẻ có thẻ đóng: Vì có nội dung bên trong nên cần phải đóng t
 
 Cấu trúc HTML5
 
-Header: Chữa nội dung thương hiệu (logo,...), Tiêu đề chính, ...
-Navigation: Điều hướng trang (Nhiều điều hướng trang khác thì nên đặt id)
-Article: Nội dung chính của bài viết, chứa các section phân đoạn nội dung bên trong, 1 body có thể có nhiều article và 1 article có thể có nhiều section
-Aside: Các đường link hoặc nội dung liên quan, ở bên cạnh Article
-Footer: Chứa thông tin như chính sách, quy định, copyright,... 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    
+</body>
+</html>
 
 Thẻ quan trọng
 <h></h> heading, từ 1 đến 6 tiêu đề nội dung trang

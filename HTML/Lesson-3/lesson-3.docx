@@ -2,10 +2,20 @@ Form có 2 attr cơ bản:
     action: nơi gửi data khi bấm submit
     method: chỉ định phương thức khi gửi dữ liệu ???
 
-tag input: phương thức đưa đầu vào
-    type text: dạng text có thể nhìn được
+tag input: nhập từ bàn phím
+    type text: dạng text có thể nhìn được, có thể lựa chọn từ 1 data list
     type password: dạng password
     type number: dạng số, chỉnh min max step
-    
+    type radio: chon 1 trong các radio cùng 1 name
+    type checkbox: có thể chọn nhiều checkbox cùng 1 name
+tag select: lựa chọn option 
+tag button: bấm để hành động
+    type submit: gửi data đi
+    type reset: xóa data đã điền
+tag textarea: tạo ra 1 trường để nhập văn bản, sửa rows và cols để định nghĩa số dòng, cột có thể điền
+
+placeholder: hiển thị như là 1 gợi ý, khi nhập sẽ biến mất
+required: bắt buộc người dùng nhập dữ liệu
+
 
 
