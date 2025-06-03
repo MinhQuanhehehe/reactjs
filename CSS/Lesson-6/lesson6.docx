@@ -1,0 +1,54 @@
+Float: đẩy các phần tử theo hướng chỉ định, các phần tử phía sau fill lại vào khoảng trống
+    right : đẩy phần tử sang phải
+    left : đẩy phần tử sang trái
+
+Display: *keyword :hiển thị nội dung
+    none: biến mất
+    block: hiển thị như 1 block
+    inline: hiện thị như 1 inline
+    inline-block: để phần tử block hiển thị như phần tử inline. (block sẽ không xuống dòng)
+
+position: *keyword :điều chỉnh vị trí phần tử
+    position: absolute : lấy vị trí chuẩn so với trình duyệt (nếu phần tư cha có position value là relative thì sẽ lấy absolute với phần từ đó)     
+    position: relative : lấy vị trí so với phần tử cha gần nhất
+    position: fixed : lấy vị trí chuẩn so với viewport (dính vào kể cả khi scroll)
+    position: sticky : lấy vị trí so với phần tử cha sau đó khi scroll qua thì dính lại vào vị trí so với trình duyệt (top và left lấy theo trình duyệt), chỉ hiển thị khi block cha còn trên màn hình
+        chỉ số thường dùng: 
+            top: *value
+            left: *value 
+
+flexbox: (Thực hành ở bài 4)
+    display: flex :sắp xếp các item trong container theo axis, (default: x axis, có thể đổi bằng attr flex-direction)
+        flex-direction: *keyword điều chỉnh hướng bắt đầu display các block
+                        row
+                        column
+                        row-reverse
+                        column-reverse
+        flex-wrap: *keyword : bọc xung quanh các item bên trong, chỉnh size để fit với container nếu size của item quá lớn
+                   wrap
+                   no-wrap
+        flex-grow: *number fill khoảng trống của container nếu thừa (điều chính khối item)
+        flex-shrink: *number co item lại nhiều hơn bình thường (khi thu nhỏ tab) (điều chính khối item)
+        flex-basis *value : set min width cố định (điều chính khối item) 
+    justify-content: *keyword: điều chỉnh vị trí bặt đầu đặt các item
+                     flex-start
+                     flex-end
+                     center
+                     space-between :cách nhau 1 khoảng đều
+                     space-around :cách nhau 1 khoảng đều và cách cả với block cha
+    align-item: *keyword :căn lề các item (điều chỉnh khối chacha)
+    align-self: *keyword :căn lề item cụ thể(điều chỉnh khối item)
+                flex-start
+                flex-end
+                center
+                stretch: kéo dãn size item fit với block cha
+                base-line: giữ các item trong cùng 1 hàng, bất kể size các item bên trong
+    order: *value :sắp xếp thứ tự các item bên trong (điều chính khối item)
+           (số thứ tự xuất hiện) 
+
+
+grid: (in progress)
+    display: grid : sắp xếp các item trên 1 container theo các vùng
+        grid-template-columns: *value1, *value2, *value3, ...  :chia container thành các cột để hiển thị item, bắt dầu từ vị trí *value1, lần lượt
+        grid-template-rows: *value1, *value2, *value3, ...  :chia container thành các hàng để hiển thị item, bắt dầu từ vị trí *value1, lần lượt
+                            auto :chia đều

@@ -1,21 +1,34 @@
-Form có 2 attr cơ bản:
-    action: nơi gửi data khi bấm submit
-    method: chỉ định phương thức khi gửi dữ liệu ???
+Note:
+caption: tiêu đề chính của bảng
+th: tiêu đè cho các thành phần
+tr: tạo hàng
+td: nội dung 1 cell
 
-tag input: nhập từ bàn phím
-    type text: dạng text có thể nhìn được, có thể lựa chọn từ 1 data list
-    type password: dạng password
-    type number: dạng số, chỉnh min max step
-    type radio: chon 1 trong các radio cùng 1 name
-    type checkbox: có thể chọn nhiều checkbox cùng 1 name
-tag select: lựa chọn option 
-tag button: bấm để hành động
-    type submit: gửi data đi
-    type reset: xóa data đã điền
-tag textarea: tạo ra 1 trường để nhập văn bản, sửa rows và cols để định nghĩa số dòng, cột có thể điền
+Cách tạo:
+Tạo 1 table
+Tạo caption
+Tạo hàng bằng tr trước, sau đó có thể thêm th hoặc td cho nội dung 1 cell, lần lượt mỗi dòng
 
-placeholder: hiển thị như là 1 gợi ý, khi nhập sẽ biến mất
-required: bắt buộc người dùng nhập dữ liệu
+Cấu trúc 1 bảng trong html:
+<table> mở đầu, bọc toàn bộ bảng
+    <caption></caption>
+    <thead> semantic tag note cho phần heading của bảng
+        <tr> 
+            <th>Tiêu đề 1</th> 
+            <th>Tiêu đề 2</th>
+        </tr>
+    </thead>
+    <tbody> semantic tag note cho phần body của bảng
+        <tr>
+            <td>Dữ liệu 1</td>
+            <td>Dữ liệu 2</td>
+        </tr>
+  </tbody>
+</table>
 
+Rowspan, colspan: thiết lập chỉ số để gộp 2 cell gần nhau theo hàng hoặc cột
+(colspan = 2 thì sẽ gộp 2 cell của 2 cột khác nhau, tương tự với rowspan)
+Nếu đã rowspan, dòng tiếp theo để tag <td></td> hoặc <th></th> hợp lí để bảng chuẩn
+Tương tự với colspan
 
-
+Thêm attr border-radius = ?px cho tag table để bo góc

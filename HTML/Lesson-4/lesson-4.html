@@ -40,8 +40,8 @@
         }
         .ite {
             background-color: aquamarine;
-            margin: 50px;
             text-align: center;
+            margin: 50px;
             width: 50px;
             padding: 50px;
         }
@@ -56,9 +56,21 @@
             flex-shrink: 2;
         }
         
+        .it {
+            background-color: aquamarine;
+            text-align: center;
+            width: 50px;
+            padding: 50px;
+        }
         .container3 {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-around;
+        }
+        .container4 {
+            align-items: center;
+            height: 500px;
+            display: flex;
+            justify-content: space-around;
         }
         
         
@@ -92,6 +104,14 @@
                 <div class="ite item10">ITEM10</div>
                 <div class="ite item11">ITEM11</div>
                 <div class="ite item12">ITEM12</div>
+            </div>
+        </article>
+        <article>
+            <div class="container container4">
+                <div class="it" style="align-self: flex-end;">ITEM</div>
+                <div class="it" style="align-self: flex-start;">ITEM</div>
+                <div class="it" style="align-self: flex-end;">ITEM</div>
+                <div class="it">ITEM</div>
             </div>
         </article>
     </main>

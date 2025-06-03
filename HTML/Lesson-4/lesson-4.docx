@@ -8,10 +8,30 @@ Semantic:
 Layout đã chia ở các bài trc
 
 flexbox:
-    display flex sẽ sắp xếp các item trong container theo axis, (default: x axis, có thể đổi bằng attr flex-direction)
-    wrap: bọc xung quanh các item bên trong, chỉnh size để fit với container nếu size của item quá lớn
-    order: sắp xếp thứ tự các item bên trong
-    flex-grow: fill khoảng trống của container nếu thừa
-    flex-shrink: co item lại nhiều hơn bình thường (khi thu nhỏ tab)
-    flex-basis: set width cố định
-    justify-content: điều chỉnh vị trí bặt đầu đặt các item
+    display: flex :sắp xếp các item trong container theo axis, (default: x axis, có thể đổi bằng attr flex-direction)
+        flex-direction: *keyword điều chỉnh hướng bắt đầu display các block
+                        row
+                        column
+                        row-reverse
+                        column-reverse
+        flex-wrap: *keyword : bọc xung quanh các item bên trong, chỉnh size để fit với container nếu size của item quá lớn
+                   wrap
+                   no-wrap
+        flex-grow: *number fill khoảng trống của container nếu thừa (điều chính khối item)
+        flex-shrink: *number co item lại nhiều hơn bình thường (khi thu nhỏ tab) (điều chính khối item)
+        flex-basis *value : set min width cố định (điều chính khối item) 
+    justify-content: *keyword: điều chỉnh vị trí bặt đầu đặt các item
+                     flex-start
+                     flex-end
+                     center
+                     space-between :cách nhau 1 khoảng đều
+                     space-around :cách nhau 1 khoảng đều và cách cả với block cha
+    align-item: *keyword :căn lề các item (điều chỉnh khối chacha)
+    align-self: *keyword :căn lề item cụ thể(điều chỉnh khối item)
+                flex-start
+                flex-end
+                center
+                stretch: kéo dãn size item fit với block cha
+                base-line: giữ các item trong cùng 1 hàng, bất kể size các item bên trong
+    order: *value :sắp xếp thứ tự các item bên trong (điều chính khối item)
+           (số thứ tự xuất hiện) 

@@ -1,0 +1,46 @@
+.ong {
+    border: 2px solid red;
+    position: relative;
+}
+.cha {
+    border: 2px solid rgb(9, 27, 22);
+    margin: 100px;
+    height: 1000px;
+}
+.con {
+    background: green;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+.absolute {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.relative {
+    position: relative;
+    top: 200px;
+    left: 700px;
+}
+.fixed {
+    position: fixed;
+    top: 200px;
+    left: 1000px;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.sontungmt {
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    background-color: aquamarine;  
+    text-align: center;
+}
+.j97 {
+    float: right
+}
