@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 1.5rem "Lora", sans-serif;
+    min-height: 100vh;
+    background-color: bisque;
+    background-image: linear-gradient(to left, whitesmoke, gray);
+    display: flex;
+    flex-direction: column;
+}
+header, nav, main, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+header, footer {
+    position: sticky;
+    background-color: #1E293B;
+    color: whitesmoke
+}
+header {
+    top: 0;
+}
+nav {
+    background-color: #fff;
+    color: #1E293B;
+    padding: 0.5rem;
+    border: #000;
+}
+main {
+    flex-grow: 1;
+}
+footer {
+    bottom: o;
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        background-color: green;
+        background-image: linear-gradient(to right, whitesmoke, gray);
+    }
+}
+@media screen and (min-width: 768px) {
+    body {
+        background-color: green;
+        background-image: linear-gradient(to top, whitesmoke, rgb(91, 49, 49));
+    }
+}
+@media screen and (min-width: 992px) {
+    body {
+        background-color: green;
+        background-image: linear-gradient(to bottom, whitesmoke, rgb(16, 163, 55));
+    }
+}
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: green;
+        background-image: linear-gradient(to bottom left, whitesmoke, rgb(250, 47, 145));
+    }
+}
+/* landscape */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    body {
+        background-color: green;
+        background-image: linear-gradient(to bottom right , whitesmoke, rgb(70, 188, 203));
+    }
+    nav {
+        display: none;
+    }
+}
+
