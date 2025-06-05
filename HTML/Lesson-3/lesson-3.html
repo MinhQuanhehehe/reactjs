@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 2</title>
     <style>
-        table {
+        table { 
             border: 1px solid #000;
             border-radius: 5px;
 
         }
-
         tr,
         td,
         th,
@@ -32,100 +31,44 @@
     </header>
     <main>
         <article>
-            <form action="http://httpbin.org/get" method="get">
-                <fieldset>
-                    <legend>Info</legend>
-
-                    <p>
-                        <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstName" placeholder="Son Tung" autocomplete="on"
-                            required="true" autofocus>
-                    </p>
-
-                    <p>
-                        <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" id="lastName" placeholder="Nguyen" autocomplete="on"
-                            required="true" autofocus>
-                    </p>
-
-                    <p>
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="ECNHQ" required="true"
-                            autofocus>
-                    </p>
-
-                    <p>
-                        <label for="telephone">Telephone</label>
-                        <input type="text" name="telephone" id="telephone" placeholder="0123456789"
-                            autocomplete="on" required="true" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                    </p>
-
-                    <p>
-                        <label for="decade">Decade</label>
-                        <input type="number" name="decade" id="decade" value="1990" min="1000" max="3000" step="10">
-                    </p>
-
-                    <p>
-                        <label for="song">Bai hat yeu thich</label>
-                        <select name="song" id="song">
-                            <optgroup label="Tieu Bieu">
-                                <option value="ECNHQ">Em cua gay hom qua</option>
-                                <option value="NAXD" selected>Nang am xa dan</option>
-                                <option value="KPDVD">Khong phai dang vua dau</option>
-                                <option value="CND">Chay ngay di</option>
-                            </optgroup>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="hatesong">Bai hat ko thich</label>
-                        <input type="text" name="hatesong" id="hatesong" list="song-list">
-                        <datalist id="song-list">
-                            <optgroup label="Tieu Bieu">
-                                <option value="ECNHQ">
-                                <option value="NAXD">
-                                <option value="KPDVD">
-                                <option value="CND">
-                            </optgroup>
-                        </datalist>
-                    </p>
-                </fieldset>
-                <fieldset>
-                    <legend>Bai hat yeu thich (chon1)</legend>
-                    <p>
-                        <input type="radio" name ="baihatyeuthich" id="CMNQ" value="CMNQ">
-                        <label for = "CMNQ">Con mua ngang qua</label> 
-                    </p>
-                    <p>
-                        <input type="radio" name ="baihatyeuthich" id="KMDT" value="KMDT">
-                        <label for = "KMDT">Khuon mat dang thuong</label> 
-                    </p>
-                    <p>
-                        <input type="radio" name ="baihatyeuthich" id="Khac" value="Khac">
-                        <label for = "Khac">Khac</label> 
-                    </p>
-                </fieldset>
-                <fieldset>
-                    <legend>Bai hat yeu thich (chon nhieu)</legend>
-                    <p>
-                        <input type="checkbox" name ="baihatyeuthichnhieu" id="BDTNR" value="BDTNR">
-                        <label for = "BDTNR">Buong doi tay nhau ra</label> 
-                    </p>
-                    <p>
-                        <input type="checkbox" name ="baihatyeuthichnhieu" id="ATBE" value="ATBE">
-                        <label for = "ATBE">Am tham ben em</label> 
-                    </p>
-                </fieldset>
-                <fieldset>
-                    <legend>Gui loi den anh ST</legend>
-                    <label for ="message">Your message:</label>
-                    <br>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Son Tung em, em em yeu anh"></textarea>
-                </fieldset>
-                <br>
-                <button type="submit">Submit</button>
-                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
-                <button type="reset">Reset</button>
-            </form>
+            <section>
+                <h3>M-TP Songs rating</h3>
+                <table>
+                    <caption>M-TP Songs Rating</caption>
+                    <thead>
+                        <tr>
+                            <th scope = "col">RANK</th>
+                            <th scope = "col">Songs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope = "row", rowspan=2>S</th>
+                            <td>Khong phai dang vua dau</td>
+                        </tr>
+                        <tr>
+                            <td>Em cua ngay hom qua</td>
+                        </tr>
+                        <tr>
+                            <th>A</th>
+                            <td>Chung ta khong thuoc ve nhau</td>
+                        </tr>
+                        <tr>
+                            <th>B</th>
+                            <td>Nang am xa dan</td>
+                        </tr>
+                        <tr>
+                            <th>C</th>
+                            <td>Chay ngay di</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan = 2>Done</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
         </article>
     </main>
     <footer>

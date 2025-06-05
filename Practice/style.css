@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: "Inter", sans-serif;
+    font-size: 1.25rem;
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+header > * {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+article {
+    margin-top: 50px;
+}
+article > * {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+nav > * {
+    margin: 20px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.art1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.sec1 > * {
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.sec1 {
+    margin-left: 10%;
+    margin-right: 5%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+}
+
+.img1 {
+    width: 40%;
+}
+input {
+    border-radius: 10px;
+    height:50px;
+    border: 2px solid gray;
+    margin-top: 10px;
+}
+.art2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sec2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fig {
+    width: 25%;
+    height: 25%;
+}
+
+.img2 {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+button {
+    background: #000;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.div1 {
+    display: flex;
+    width: 30%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.div2 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+footer > * {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+figure > p {
+    font-size: 1rem;
+    color: gray;
+}
+p strong {
+    color: black;
+}
+.div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}

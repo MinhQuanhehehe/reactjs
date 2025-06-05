@@ -1,0 +1,29 @@
+@media: sửa đổi layout theo màn hình, thiết bị
+    syntax: 
+    @media *mediatype and (*condition: breakpoint) {
+        //CSS rule
+    }
+    thường hay chỉnh theo min width, có thể chỉnh theo height nếu chỉnh landscapelandscape
+
+danh sách breakpoint:
+    bootstrap:
+        | Kích thước màn hình     | Tên breakpoint | `min-width` (px) |
+        | ----------------------- | -------------- | ---------------- |
+        | Extra small (XS)        | — *(mặc định)* | 0                |
+        | Small (SM)              | `sm`           | 576px            |
+        | Medium (MD)             | `md`           | 768px            |
+        | Large (LG)              | `lg`           | 992px            |
+        | Extra large (XL)        | `xl`           | 1200px           |
+        | XXL (Extra extra large) | `xxl`          | 1400px           |
+    tailwind:
+        | Tên breakpoint | `min-width` (px) | Thiết bị           |
+        | -------------- | ---------------- | ------------------ |
+        | `sm`           | 640px            | Mobile lớn trở lên |
+        | `md`           | 768px            | Tablet trở lên     |
+        | `lg`           | 1024px           | Laptop trở lên     |
+        | `xl`           | 1280px           | Desktop rộng       |
+        | `2xl`          | 1536px           | Màn hình rất lớn   |  
+
+mobile-first: viết css cho layout nhỏ trước, rồi lớn dần, sẽ dễ hơn là làm ngược lại
+    Đầu tiên, viết @media cho màn hình nhỏ, rồi đè dần các @media khác lên trên
+

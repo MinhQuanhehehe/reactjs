@@ -1,26 +1,122 @@
-Selector: có thể select tới:
-    tag
-    class
-    id
+Selector: 
+    element selector: select tới 1 tag
+        p {
+        }
+    class selector: select theo class
+        .classname {
+        }
+    ID selector: select theo ID
+        #id {
+        }
+    universal selector :select toàn bộ phần tử
+        * {
+        }
+CSS ưu tiên style phần tử có priority cao hơn
+priority: Universal < Element < Class < ID
+Phân biệt class và id : class sẽ dùng được cho nhiều phần tử và id chỉ dùng được cho 1 phần tửtử
+
+Pseudo Selector: select trạng thái cụ thể của element hoặc class
+    :link select đương link 
+    :visited select đường link đã được đến
+    :hover select trạng thái có con trỏ chuột ở phần tửtử
+    :active select trạng thái khi được click vào
+    :first-child, :last-child, :nth-child select phần tử con đầu tiên/cuối cùng/thứ n của phần tử
+
+Advanced selector:
+    adjacent sibling selector: phần tử cùng bậc liền kề, dùng + 
+    general sibling selector: phần tử cùng bậc liền kề, cùng 1 phần tử cha, dùng ~
+    child selector: các phần tử con trực tiếp của phần tử cha, dùng >
+    descendant selector: tất cả các phần tử con, không cần phải là trực tiếp, dùng _blank
+
+Attribute selector: select phần tử có thuộc tính tương ứng 
+    p [attr=value] {
+    }
+    đối với attr src:
+        src^= "img/" bắt đầu bằng img
+        src$= ".png" kết thúc bằng đuôi png
+        src*= "str" chứa chuỗi str
+    attr class
+        class~="classname" phần tử có ít nhất 1 class là classname
+        class^="classname" phần tử có class bắt đầù bằng "classname"
+        class$="classname" phần tử có class kết thúc bằng "classname"
+        class*="classname" phần tử có class chứa "classname"
+
+Type of Units:
+    Absolute units: Unit hằng số, không thay đổi
+        px, cm, ...
+    Relative units: Unit liên hệ tới phần tử khác
+        %: percentage: phần trăm tỉ lệ với phần tử chứa nó
+        em: giống percentage
+        rem: tỉ lệ với root của trình duyệt
+        vh,vw: tỉ lệ với viewportviewport
 
 style 1 selector:
-    color: màu nội dung
-    background: màu nền
-    text-align: căn giữa
-    margin: khoảng cách của các element bên ngoài đến block
-    padding: khoảng các từ viền block tới nội dung bên trong block
-    font-family: thay đổi font, (load từ bên ngoài bằng thẻ <link>)
-
-Values:
-    length:
-        absolute: px
-        relative: em, rem (rem liên hệ đến fontsize của root, còn em thì liên hệ đến fontsize của elementelement)
-                  vh, vw (phần trăm chieeuf cao hoặc chiều rộng của viewport)
-    percentages: cơ bản là length nhưng luôn luôn liên hệ với chỉ số khác
-
     Color: 
-        keyword
-        rgb
-        hexadecimal
-        hwb
-        hsl
+        3 cách chọn màu cơ bản
+            keyword
+                black, white
+            hexcode
+                #000000, #ffffff
+            rgb: rgb có thể có thêm 1 chỉ số nữa: rgba with a is transparency 0->1 
+                rgb(0,0,0), rgb(255,255,255)
+    Background: làm việc như color, có thể link đến url của img
+        background: url("...."): đặt background là img (hiển thị lặp lại ảnh, nhìn xấu), properties:
+            background-repeat: no-repeat: background k lặp lại nhưng chỉ hiển thị đúng size của ảnh
+            background-size: ?px ?px: sửa size cho backgound, khó để fit với phần tử
+                            cover: fit với phần tử có thể gây ra thiếu chi tiết ảnh trên backgoundbackgound
+                            contain: fit với phần tử nhưng size scale cùng chỉ số, nhìn vẫn xấu và có thể bị repeat
+        background: linear-gradient(to *direaction *another-directiondirection, color1, color2, color3,...) linear gradient :D
+                                    (có thể thay phần direction bằng deg)
+        background: radial-gradient(shape, color1 ?%, color2 ?%, color3 ?%)
+    Text:
+        text-decoration: line-through
+                         underline :(default)
+                         overline
+        text-transform: capitalize
+                        uppercase
+                        lowercase
+        text-align: left (default)
+                    right
+                    justify
+                    centercenter
+    Font: có thể sử dụng external form bằng thẻ link (<link href="" rel= "">)
+        font-size: *value 
+        font-weight: *value :in đậm
+        font-style: italic :in nghiêng
+                    oblique :in nghiêng
+        font-family font1, font2, font3, ... :nếu font1 không khả dụng, dùng font2, tương tự với các font còn lại
+
+Box Model:
+                                    padding
+                        ------------border-------------
+                        | --------------------------- |
+                        | |         padding         | |
+                        | |  ---------------------  | |
+                        | |  |      content      |  | |
+                        | |  ---------------------  | |
+                        | --------------------------- |
+                        -------------------------------    
+    Unit sử dụng: px , % , vh, vw
+    height: *value :chiều cao
+    width: *value :chiều rộng
+    border: *size *style *color :viền block
+                   style gồm có dashed, solid, dotted, double, ...  
+    margin: *value :khoảng cách của các element bên ngoài đến block
+        margin-top: *value
+        margin-bottom: *value
+        margin-left: *value
+        margin-right: *value
+    padding: *value :khoảng các từ viền block tới nội dung bên trong block
+        padding-top: *value
+        padding-bottom: *value
+        padding-left: *value
+        padding-right: *value
+
+Type of Units:
+    Absolute units: Unit hằng số, không thay đổi
+        px, cm, ...
+    Relative units: Unit liên hệ tới phần tử khác
+        %: percentage: phần trăm tỉ lệ với phần tử chứa nó
+        em: giống percentage
+        rem: tỉ lệ với root của trình duyệt
+        vh,vw: tỉ lệ với viewport
