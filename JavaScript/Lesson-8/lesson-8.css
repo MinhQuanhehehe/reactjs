@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    background-color:aliceblue;
+    background: contain;
+    font-size:2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+button, input {
+    font-size: xx-large;
+    background-color: beige;
+    text-align: center;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.25ms;
+}
+button:hover {
+    background-color: bisque;
+
+}
