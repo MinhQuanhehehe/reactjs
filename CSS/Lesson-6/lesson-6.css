@@ -44,3 +44,30 @@
 .j97 {
     float: right
 }
+
+.grid-container {
+    background: beige;
+    margin: 10px;
+    height: 300px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 150px;
+    grid-template-rows: auto auto;
+    /*grid-row-gap: 150px;*/
+    /*justify-content: space-evenly;*/
+    
+
+}
+.grid-item {
+    margin: 10px;
+    font-size: x-large;
+    width: 100px;
+    line-height: 40px;
+    background: rgb(113, 154, 234);
+    text-align:center;
+}
+.grid1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
