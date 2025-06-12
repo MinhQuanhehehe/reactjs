@@ -3,7 +3,7 @@
     @media *mediatype and (*condition: breakpoint) {
         //CSS rule
     }
-    thường hay chỉnh theo min width, có thể chỉnh theo height nếu chỉnh landscapelandscape
+    thường hay chỉnh theo min width, có thể chỉnh theo height nếu chỉnh landscape
 
 danh sách breakpoint:
     bootstrap:
