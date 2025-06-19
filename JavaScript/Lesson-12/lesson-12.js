@@ -1,8 +1,12 @@
 const dices = document.getElementById("dices");
 const roll = document.getElementById("roll");
+const talentorfaint = document.getElementById("talentorfaint");
 
-
-function rollDice() {
+const maxnum = 6;
+let msg = "";
+let final = 0;
+let value1;
+function rollDice(callback) {
     let amount = Number(dices.value);
     let imagestring = "";
     let image = [];
@@ -18,6 +22,7 @@ function rollDice() {
     for (let i = 0; i < value.length; i++) {
         if (i == value.length - 1) {
             valuestring += value[i];
+            final += value[i];
         }
         else {
             valuestring += value[i] + ", ";
@@ -30,5 +35,16 @@ function rollDice() {
     console.log(value);
     result.textContent = valuestring;
     resultImg.innerHTML = imagestring;
+    msg = callback();
+    talentorfaint.textContent = msg;
+    value1 = value;
 }
-roll.onclick = rollDice;
+function talentOrFaint () {
+    if (final > (maxnum * value1.length + value1.lenght) / 2) {
+        return "Talent";
+    }
+    else {
+        return "Faint";
+    }
+}
+roll.onclick = rollDice(talentOrFaint);
