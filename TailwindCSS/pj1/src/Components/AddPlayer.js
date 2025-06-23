@@ -1,18 +1,22 @@
 import React from 'react'
 import { useRef } from 'react'
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 const AddPlayer = ({ newPlayer, setNewPlayer, handleSubmit }) => {
   const inputRef = useRef();
   return (
-    <form className="w-full flex justify-between m-4 border-gray-200 a" onSubmit={(e) => handleSubmit(e)}>
+    <form className="w-full flex justify-around m-4 border-gray-200 a flex-wrap gap-2 p-2" onSubmit={(e) => handleSubmit(e)}>
       <label htmlFor="playerName" className='sr-only'>Player Name</label>
-      <input
-        className='grow border-2 mx-2 rounded bg-gray-300 text-center'
+      <TextField 
+        variant="outlined" 
+        className='grow focus:bg-slate-400'
         autoFocus
         ref={inputRef}
         id="playerName"
         type='text'
-        placeholder='Player Name'
+        label="Player Name"
         required
         value={newPlayer.name}
         onChange={(e) => {
@@ -22,11 +26,12 @@ const AddPlayer = ({ newPlayer, setNewPlayer, handleSubmit }) => {
         }}
       />
       <label htmlFor="playerNumber" className='sr-only'>Player Number</label>
-      <input
-        className="grow border-2 mx-2 rounded bg-gray-300 text-center"
+      <TextField 
+        variant="outlined"
+        className="grow focus:bg-slate-400"
         id="playerNumber"
         type='number'
-        placeholder='Player Number'
+        label='Player Number'
         required
         value={newPlayer.number === 0 ? '' : newPlayer.number}
         onChange={(e) => {
@@ -36,11 +41,12 @@ const AddPlayer = ({ newPlayer, setNewPlayer, handleSubmit }) => {
         }}
       />
       <label htmlFor="playerNation" className='sr-only'>Player Nation</label>
-      <input
-        className='grow border-2 mx-2 rounded bg-gray-300 text-center'
+      <TextField 
+        variant="outlined"
+        className='grow focus:bg-slate-400'
         id="playerNation"
         type='text'
-        placeholder='Player Nation'
+        label='Player Nation'
         required
         value={newPlayer.nation}
         onChange={(e) => {
@@ -49,14 +55,15 @@ const AddPlayer = ({ newPlayer, setNewPlayer, handleSubmit }) => {
           }))
         }}
       />
-      <button
-        className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mx-2'
+      <Button
+        className= 'hover:bg-green-500'
+        variant='contained'
         type='submit'
         aria-label='Add Player'
         onClick={() => inputRef.current.focus()}
       >
         Add
-      </button>
+      </Button>
     </form>
   )
 }

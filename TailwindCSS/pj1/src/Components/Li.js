@@ -1,11 +1,17 @@
 import React from 'react'
+import Button from '@mui/material/Button';
+import Checkbox from '@mui/material/Checkbox';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+
 
 const Li = ({ player, handleCheck, handleDelete }) => {
     return (
-        <li className="flex justify-between items-center py-2 pl-2 mb-1 bg-gray-200 rounded first:mt-0" key={player.playerId}>
-            <input type='checkbox' className="w-12 h-12 min-w-[48px] min-h-[48px] cursor-pointer mr-2" checked={player.checked} onChange={() => handleCheck(player.playerId)} />
-            <label>{player.name} --- {player.nation} --- {player.number}</label>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mr-2" onClick={() => handleDelete(player.playerId)}>Delete</button>
+        <li className="bg-white border border-gray-300 shadow-md rounded-lg p-4 flex justify-between items-center" key={player.playerId}>
+            <Checkbox size='large' className="" checked={player.checked} onChange={() => handleCheck(player.playerId)} />
+            <p>{player.name} --- {player.nation} --- {player.number}</p>
+            <Button variant="contained" className=" hover:bg-red-500 active:bg-red-500" onClick={() => handleDelete(player.playerId)}>Delete</Button>
+            {/* <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mr-2 active:bg-red-500" onClick={() => handleDelete(player.playerId)}>Delete</button> */}
         </li>
     )
 }

@@ -4,6 +4,7 @@ import Footer from './Components/Footer.js';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Detect from './Components/Detect.js';
+import Loading from './Components/Loading.js';
 
 function App() {
   const API_URL = 'https://jsonplaceholder.typicode.com/users';
@@ -51,10 +52,13 @@ function App() {
     }, 2000);
   }, []);
   return (
-    <div className="App flex flex-col justify-between items-center h-screen w-full mx-auto">
-      <Header />
-      <Detect data={data} loading={loading} fetchError={fetchError} />
-      <Footer data={data} />
+    <div className="App flex flex-col justify-between items-center h-screen">
+      {loading ? <Loading />: 
+      <div className='flex flex-col justify-between items-center h-screen w-full mx-auto'>
+        <Header />
+        <Detect data={data} loading={loading} fetchError={fetchError} />
+        <Footer data={data} />
+      </div> }
     </div>
   );
 }
